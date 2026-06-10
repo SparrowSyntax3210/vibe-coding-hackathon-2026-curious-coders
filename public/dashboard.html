@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interview Dashboard</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <div class="sidebar">
+
+        <div class="logo">
+            <div class="logo-circle"></div>
+            <span>InterVexa</span>
+        </div>
+
+        <div class="menu">
+
+            <div class="menu-item active">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </div>
+
+            <div class="menu-item">
+                <i class="fa-solid fa-briefcase"></i>
+                <span>Interviews</span>
+            </div>
+
+            <div class="menu-item">
+                <i class="fa-solid fa-chart-simple"></i>
+                <span>Analytics</span>
+            </div>
+
+            <div class="menu-item">
+                <i class="fa-solid fa-house-user"></i>
+                <span>HomePage</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <div class="main">
+
+        <!-- HEADER -->
+
+        <div class="header">
+
+            <div>
+                <h1>Welcome back, Harsh 👋</h1>
+                <p>Keep practicing, keep improving!</p>
+            </div>
+
+            <div class="week-box">
+                This Week
+            </div>
+            <button id="downloadReportBtn">
+    <i class="fa-solid fa-download"></i>
+    Download Report
+</button>
+
+        </div>
+
+
+        <!-- TOP SECTION -->
+
+        <div class="top-section">
+
+            <!-- LEFT -->
+
+            <div class="left-content">
+
+                <!-- CARDS -->
+
+                <div class="cards">
+
+                    <div class="card">
+                        <small>Total Interviews</small>
+                        <h2 id="totalInterviews">0</h2>
+                        <span>+20%</span>
+                    </div>
+
+                    <div class="card">
+                        <small>Confidence</small>
+                        <h2 id="confidenceScore">0%</h2>
+                        <span>+15%</span>
+                    </div>
+
+                    <div class="card">
+                        <small>Best Score</small>
+                        <h2 id="bestScore">0%</h2>
+                        <span>Excellent</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT CIRCLE -->
+
+            <div class="score-card">
+
+                <div class="circle" id="circle">
+
+                    <div class="inner-circle">
+                        <h2 id="overallScore">0%</h2>
+                        <p>Overall Score</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUESTION SECTION -->
+
+        <div class="question-section">
+
+            <div class="section-title">
+                <h2>Interview Performance</h2>
+            </div>
+
+            <div class="answer question-grid">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="dashboard.js"></script>
+
+</body>
+
+</html>

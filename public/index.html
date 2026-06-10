@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Interview Setup</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<header class="nav">
+
+    <!-- Logo -->
+    <div class="logo">
+        <img src="./assets/logo.jpeg">
+        <h1>InterVexa</h1>
+    </div>
+
+    <!-- Center Navigation -->
+    <nav class="nav-center">
+        <ul>
+            <li><a href="#">Enterprise</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Docs</a></li>
+            <li><a href="#">FAQ's</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Right Icons -->
+    <div class="nav-right">
+        <ul>
+            <li> </li>
+        </ul>
+    </div>
+
+</header>
+
+<!-- ================= HERO SECTION ================= -->
+
+<section class="hero">
+
+<img src="../public/assets/splie.png" alt="">
+<div class="hero-left">
+ <br><br>
+
+
+<h1 class="hero-title">
+<span>Built to make interviews </span>less stressful and more achievable<br>
+</h1>
+
+<p class="hero-desc">
+Practice real interview scenarios, receive instant AI-powered 
+feedback, and improve your confidence before facing recruiters.
+</p>
+
+
+<div class="hero-stats">
+
+<div class="stat">
+<h2>150+</h2>
+<p>Practice Sessions</p>
+</div>
+
+<div class="stat">
+<h2>80+</h2>
+<p>Companies Covered</p>
+</div>
+
+<div class="stat">
+<h2>15+</h2>
+<p>AI Features</p>
+</div>
+
+</div>
+<button class="hero-btn">
+Get Started
+</button>
+
+
+</div>
+
+
+<div class="hero-right">
+<spline-viewer 
+url="https://prod.spline.design/FZPKYmrMj1QQYvGi/scene.splinecode">
+</spline-viewer>
+
+</div>
+
+</section>
+
+<section class="why-us">
+
+    <h1 class="title">Why InterVexa?</h1>
+
+    <div class="marquee">
+        <div class="marquee-content" id="marquee-content">
+
+            <span>AI Powered Interview Preparation</span>
+            <span>Resume Analysis & Smart Suggestions</span>
+            <span>Real-Time Mock Interviews</span>
+            <span>Confidence Building Experience</span>
+            <span>Track Your Performance Growth</span>
+            <span>Designed For Students & Developers</span>
+
+        </div>
+    </div>
+
+</section>
+
+<!-- ================= CARDS ================= -->
+<section class="cards">
+
+<div class="card">
+<h3>AI-Powered Question Generation</h3>
+
+<ul>
+<li><b>Job Role Based</b></li>
+<li><b>Skill Based</b></li>
+<li><b>Experience Based</b></li>
+</ul>
+
+</div>
+
+
+<div class="card">
+<h3>Candidate Interaction</h3>
+
+<ul>
+<li><b>Voice + Text Interview</b></li>
+<li><b>Real-Time Feedback</b></li>
+</ul>
+
+<p>
+Candidates can answer via voice or typing with 
+instant AI suggestions.
+</p>
+
+</div>
+
+
+<div class="card">
+<h3>Real-time AI Interaction</h3>
+
+<ul>
+<li><b>Adaptive Dialog</b></li>
+<li><b>Voice Enabled</b></li>
+</ul>
+
+<p>
+Questions evolve dynamically based on your responses.
+</p>
+
+</div>
+
+<div class="card">
+<h3>AI-Powered Question Generation</h3>
+
+<ul>
+<li><b>Job Role Based</b></li>
+<li><b>Skill Based</b></li>
+<li><b>Experience Based</b></li>
+</ul>
+
+</div>
+
+
+<div class="card">
+<h3>Candidate Interaction</h3>
+
+<ul>
+<li><b>Voice + Text Interview</b></li>
+<li><b>Real-Time Feedback</b></li>
+</ul>
+
+<p>
+Candidates can answer via voice or typing with 
+instant AI suggestions.
+</p>
+
+</div>
+
+
+<div class="card">
+<h3>Real-time AI Interaction</h3>
+
+<ul>
+<li><b>Adaptive Dialog</b></li>
+<li><b>Voice Enabled</b></li>
+</ul>
+
+<p>
+Questions evolve dynamically based on your responses.
+</p>
+
+</div>
+
+</section>
+<!-- ================= MAIN ================= -->
+<div class="container">
+
+    <!-- LEFT SIDE -->
+    <div class="page">
+
+    <h1 class="heading" style="text-align: center;">AI Interview Setup</h1>
+
+    <div class="main">
+
+        <!-- LEFT -->
+       <div class="upload-section">
+  <div class="upload-box" id="uploadBox">
+      <i class="fa-solid fa-file-arrow-up"></i>
+      <p id="resumeText">Upload Your Resume</p>
+      <button id="analyzeBtn">Analyze Resume</button>
+      
+<div id="analysisResult"></div>
+  </div>
+</div>
+
+<input 
+  type="file" 
+  id="resumeUpload" 
+  accept=".pdf,.doc,.docx" 
+  style="display:none"
+/>
+ 
+
+        <!-- RIGHT -->
+        <form id="interviewForm">
+
+            <div class="input-group">
+                <input type="text" placeholder=" " required>
+                <label>Role</label>
+            </div>
+
+            <div class="input-group">
+
+                <select required>
+    <option value="" disabled selected hidden></option>
+
+    <option value="0-3 Months">0 - 3 Months</option>
+
+    <option value="3-6 Months">3 - 6 Months</option>
+
+    <option value="6-12 Months">6 - 12 Months</option>
+
+    <option value="1-2 Years">1 - 2 Years</option>
+
+    <option value="2-5 Years">2 - 5 Years</option>
+
+    <option value="5+ Years">5+ Years</option>
+</select>
+
+    <label>Experience</label>
+
+</div>
+
+            <div class="input-group">
+                <input type="number" placeholder=" " required>
+                <label>Number of Questions</label>
+            </div>
+
+            <select id="mode" required>
+    <option value="Technical Interview">Technical Interview</option>
+    <option value="HR Interview">HR Interview</option>
+</select>
+
+            <button type="submit">Generate Questions</button>
+
+            <button type="button" id="Redirect" style="color:black;"> Go To Interview </button>
+        </form>
+
+    </div>
+</div>
+</div>
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- LEFT -->
+        <div class="logo-section">
+
+            <div class="logo">
+                <div class="logo-circle"></div>
+                <h2>InterVexa</h2>
+            </div>
+
+            <p>
+                AI-powered interview preparation platform
+                built to boost your confidence and help
+                you get hired faster.
+            </p>
+
+            <div class="socials">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+
+        </div>
+
+        <!-- COLUMN -->
+        <div class="footer-column">
+            <h3>Platform</h3>
+
+            <ul>
+                <li><a href="#">Enterprise</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">AI Interview Setup</a></li>
+            </ul>
+        </div>
+
+        <!-- COLUMN -->
+        <div class="footer-column">
+            <h3>Resources</h3>
+
+            <ul>
+                <li><a href="#">Documentation</a></li>
+                <li><a href="#">Guides</a></li>
+                <li><a href="#">Changelog</a></li>
+                <li><a href="#">Help Center</a></li>
+            </ul>
+        </div>
+
+        <!-- COLUMN -->
+        <div class="footer-column">
+            <h3>Company</h3>
+
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+
+        <!-- NEWSLETTER -->
+        <div class="footer-column newsletter">
+
+            <h3>Stay Updated</h3>
+
+            <p>
+                Subscribe to get the latest updates
+                and tips.
+            </p>
+
+            <div class="email-box">
+                <input type="email" placeholder="Enter your email">
+                <button>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="bottom-line"></div>
+
+</footer>
+
+
+<script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.86/build/spline-viewer.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

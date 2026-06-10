@@ -1,0 +1,814 @@
+:root{
+
+  --bg-primary:#000000;
+  --bg-secondary:#050505;
+
+  --card:#0b0b0b;
+  --card-light:#101010;
+
+  --accent:#00f7ff;
+  --accent-soft:rgba(0,247,255,0.12);
+
+  --border:rgba(255,255,255,0.07);
+
+  --text:#ffffff;
+  --text-secondary:#9ca3af;
+
+  --success:#00ff99;
+  --danger:#ff5b5b;
+
+  --shadow:0 0 30px rgba(0,247,255,0.08);
+}
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+
+  min-height:100vh;
+
+  background:
+  radial-gradient(circle at top right,#07141a 0%,#000000 45%);
+
+  color:var(--text);
+
+  display:flex;
+
+  overflow-x:hidden;
+}
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.sidebar{
+
+  width:260px;
+
+  min-height:100vh;
+
+  background:#030303;
+
+  border-right:1px solid #111;
+
+  padding:30px 18px;
+
+  position:sticky;
+  top:0;
+}
+
+.logo{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:14px;
+
+  margin-bottom:55px;
+}
+
+.logo-circle{
+
+  width:18px;
+  height:18px;
+
+  border-radius:50%;
+
+  background:var(--accent);
+
+  box-shadow:0 0 20px var(--accent);
+}
+
+.logo span{
+
+  font-size:30px;
+
+  font-weight:800;
+
+  letter-spacing:-1px;
+}
+
+/* =====================================================
+   MENU
+===================================================== */
+
+.menu{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:14px;
+}
+
+.menu-item{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:14px;
+
+  padding:16px 18px;
+
+  border-radius:18px;
+
+  cursor:pointer;
+
+  color:var(--text-secondary);
+
+  transition:0.3s ease;
+}
+
+.menu-item i{
+  font-size:18px;
+}
+
+.menu-item:hover{
+
+  background:rgba(255,255,255,0.03);
+
+  color:white;
+}
+
+.menu-item.active{
+
+  background:rgba(0,247,255,0.08);
+
+  color:var(--accent);
+
+  border:1px solid rgba(0,247,255,0.18);
+
+  box-shadow:var(--shadow);
+}
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.main{
+
+  flex:1;
+
+  padding:40px;
+
+  min-height:100vh;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:flex-start;
+
+  gap:30px;
+
+  margin-bottom:42px;
+}
+
+.header-left h1{
+
+  font-size:62px;
+
+  font-weight:800;
+
+  margin-bottom:12px;
+
+  letter-spacing:-2px;
+}
+
+.header-left p{
+
+  color:var(--text-secondary);
+
+  font-size:17px;
+
+  line-height:1.6;
+}
+
+.header-right{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:16px;
+
+  flex-wrap:wrap;
+}
+
+.week-box{
+
+  background:#0c0c0c;
+
+  border:1px solid var(--border);
+
+  padding:15px 22px;
+
+  border-radius:16px;
+
+  color:#dcdcdc;
+
+  font-size:14px;
+}
+
+#downloadReportBtn{
+
+  padding:15px 24px;
+
+  border:none;
+
+  border-radius:16px;
+
+  background:rgba(0,247,255,0.08);
+
+  border:1px solid rgba(0,247,255,0.2);
+
+  color:var(--accent);
+
+  font-size:15px;
+
+  font-weight:600;
+
+  cursor:pointer;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  transition:0.3s ease;
+
+  box-shadow:var(--shadow);
+}
+
+#downloadReportBtn:hover{
+
+  transform:translateY(-3px);
+
+  background:rgba(0,247,255,0.12);
+
+  border-color:rgba(0,247,255,0.4);
+}
+
+/* =====================================================
+   TOP SECTION
+===================================================== */
+
+.top-section{
+
+  display:grid;
+
+  grid-template-columns:1fr 320px;
+
+  gap:26px;
+
+  align-items:stretch;
+}
+
+/* =====================================================
+   STATS CARDS
+===================================================== */
+
+.cards{
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:22px;
+}
+
+.card{
+
+  background:rgba(255,255,255,0.02);
+
+  border:1px solid var(--border);
+
+  border-radius:26px;
+
+  padding:28px;
+
+  min-height:180px;
+
+  backdrop-filter:blur(10px);
+
+  transition:0.3s ease;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+}
+
+.card:hover{
+
+  transform:translateY(-4px);
+
+  border-color:rgba(0,247,255,0.25);
+
+  box-shadow:var(--shadow);
+}
+
+.card small{
+
+  color:var(--text-secondary);
+
+  font-size:15px;
+}
+
+.card h2{
+
+  margin:16px 0 12px;
+
+  font-size:56px;
+
+  font-weight:800;
+}
+
+.card span{
+
+  color:var(--success);
+
+  font-size:14px;
+}
+
+/* =====================================================
+   SCORE CARD
+===================================================== */
+
+.score-card{
+
+  background:rgba(255,255,255,0.02);
+
+  border:1px solid var(--border);
+
+  border-radius:30px;
+
+  padding:25px;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+}
+
+.circle{
+
+  width:230px;
+  height:230px;
+
+  border-radius:50%;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  background:
+  conic-gradient(
+    var(--accent) 0deg,
+    var(--accent) 180deg,
+    #0d0d0d 180deg
+  );
+
+  box-shadow:
+  0 0 40px rgba(0,247,255,0.18);
+}
+
+.inner-circle{
+
+  width:175px;
+  height:175px;
+
+  border-radius:50%;
+
+  background:#050505;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  flex-direction:column;
+
+  border:1px solid rgba(255,255,255,0.04);
+}
+
+/* =====================================================
+   EXPECTED ANSWER
+===================================================== */
+
+.expected-answer{
+
+  background:rgba(0,247,255,0.04);
+
+  border:1px solid rgba(0,247,255,0.12);
+}
+
+.inner-circle h2{
+
+  font-size:58px;
+
+  font-weight:800;
+}
+
+.inner-circle p{
+
+  color:var(--text-secondary);
+
+  margin-top:10px;
+}
+
+/* =====================================================
+   QUESTION SECTION
+===================================================== */
+
+.question-section{
+
+  margin-top:55px;
+}
+
+.section-title{
+
+  margin-bottom:30px;
+}
+
+.section-title h2{
+
+  font-size:40px;
+
+  font-weight:800;
+
+  letter-spacing:-1px;
+}
+
+/* =====================================================
+   QUESTION GRID
+===================================================== */
+
+/* =====================================================
+   QUESTION GRID
+===================================================== */
+
+.question-grid{
+
+  display:grid;
+
+  grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
+
+  gap:22px;
+}
+
+/* =====================================================
+   FEEDBACK CARD
+===================================================== */
+
+.feedback-card{
+
+  background:rgba(255,255,255,0.02);
+
+  border:1px solid rgba(255,255,255,0.06);
+
+  border-radius:24px;
+
+  padding:24px;
+
+  transition:0.3s ease;
+
+  height:100%;
+}
+
+.feedback-card:hover{
+
+  transform:translateY(-4px);
+
+  border-color:rgba(0,247,255,0.25);
+
+  box-shadow:0 0 20px rgba(0,247,255,0.08);
+}
+
+/* =====================================================
+   CARD TOP
+===================================================== */
+
+.card-top{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  margin-bottom:20px;
+}
+
+.question-title{
+
+  color:var(--accent);
+
+  font-size:24px;
+
+  font-weight:700;
+}
+
+.rating-badge{
+
+  padding:8px 14px;
+
+  border-radius:12px;
+
+  background:rgba(0,247,255,0.08);
+
+  border:1px solid rgba(0,247,255,0.2);
+
+  color:var(--accent);
+
+  font-size:12px;
+
+  font-weight:700;
+}
+
+/* =====================================================
+   REPORT SECTION
+===================================================== */
+
+.report-section{
+
+  margin-bottom:16px;
+
+  padding:16px;
+
+  border-radius:18px;
+
+  background:#090909;
+
+  border:1px solid rgba(255,255,255,0.04);
+}
+
+.report-section h3{
+
+  font-size:15px;
+
+  margin-bottom:10px;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:8px;
+}
+
+.report-section p{
+
+  color:#d7d7d7;
+
+  font-size:13px;
+
+  line-height:1.6;
+
+  max-height:90px;
+
+  overflow:auto;
+}
+
+/* =====================================================
+   SCORE BOX
+===================================================== */
+
+.score-box{
+
+  margin-top:18px;
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:12px;
+}
+
+.score-item{
+
+  background:#090909;
+
+  border:1px solid rgba(255,255,255,0.05);
+
+  border-radius:18px;
+
+  padding:16px;
+
+  min-height:140px;
+}
+
+.score-item h4{
+
+  color:#8f8f8f;
+
+  font-size:13px;
+
+  margin-bottom:10px;
+}
+
+.score-percent{
+
+  color:var(--accent);
+
+  font-size:28px;
+
+  font-weight:700;
+
+  margin-bottom:10px;
+}
+
+.score-content{
+
+  color:#d7d7d7;
+
+  font-size:12px;
+
+  line-height:1.5;
+}
+
+/* =====================================================
+   FEEDBACK GRID
+===================================================== */
+
+.improvement-grid{
+
+  margin-top:18px;
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:12px;
+}
+
+.feedback-mini-card{
+
+  background:#090909;
+
+  border-radius:18px;
+
+  padding:16px;
+
+  border:1px solid rgba(255,255,255,0.05);
+}
+
+.feedback-mini-card h3{
+
+  font-size:14px;
+
+  margin-bottom:12px;
+}
+
+.feedback-mini-card ul{
+
+  padding-left:18px;
+}
+
+.feedback-mini-card li{
+
+  color:#d7d7d7;
+
+  font-size:12px;
+
+  line-height:1.5;
+
+  margin-bottom:6px;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:1200px){
+
+  .question-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:768px){
+
+  .question-grid{
+    grid-template-columns:1fr;
+  }
+
+  .score-box{
+    grid-template-columns:1fr;
+  }
+
+  .improvement-grid{
+    grid-template-columns:1fr;
+  }
+}
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:1200px){
+
+  .top-section{
+    grid-template-columns:1fr;
+  }
+
+  .cards{
+    grid-template-columns:repeat(3,1fr);
+  }
+}
+
+@media(max-width:992px){
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  .score-box{
+    grid-template-columns:1fr;
+  }
+
+  .improvement-grid{
+    grid-template-columns:1fr;
+  }
+
+  .header-left h1{
+    font-size:48px;
+  }
+}
+
+@media(max-width:768px){
+
+  body{
+    flex-direction:column;
+  }
+
+  .sidebar{
+    width:100%;
+    min-height:auto;
+    position:relative;
+  }
+
+  .main{
+    padding:24px;
+  }
+
+  .header{
+    flex-direction:column;
+  }
+
+  .header-left h1{
+    font-size:40px;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  .card-top{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .question-title{
+    font-size:28px;
+  }
+
+  .circle{
+    width:200px;
+    height:200px;
+  }
+
+  .inner-circle{
+    width:150px;
+    height:150px;
+  }
+
+  .inner-circle h2{
+    font-size:42px;
+  }
+}

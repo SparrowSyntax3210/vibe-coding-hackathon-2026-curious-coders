@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    /* Dark space-like background */
+    background: radial-gradient(circle at top, #110d1c, #05040a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Subtle starry texture using radial gradients */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(1px 1px at 20px 30px, rgba(255,255,255,0.15), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 40px 70px, rgba(255,255,255,0.1), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 50px 160px, rgba(255,255,255,0.15), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, rgba(255,255,255,0.2), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.15), rgba(0,0,0,0));
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    z-index: 0;
+}
+
+.container {
+    text-align: center;
+    z-index: 1;
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Card with massive neon purple/pink glow */
+.card {
+    position: relative;
+    background: #191428; /* Solid dark purple/gray */
+    padding: 40px 35px;
+    width: 380px;
+    border-radius: 16px;
+    box-shadow: 0 0 120px 20px rgba(147, 51, 234, 0.35); /* The neon aura */
+    text-align: left;
+}
+
+/* Typography */
+.welcome {
+    font-size: 13px;
+    color: #8c899c;
+    margin-bottom: 4px;
+}
+
+.card h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+/* Input Fields */
+label {
+    font-size: 13px;
+    color: #a09eb0;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.input-box {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid #443460;
+    background: rgba(255, 255, 255, 0.03);
+    color: #fff;
+    outline: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.input-box input::placeholder {
+    color: #5d596e;
+}
+
+/* Input focus effect */
+.input-box input:focus {
+    border-color: #d946ef;
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 0 0 1px #d946ef;
+}
+
+/* Password row specific adjustments */
+.password-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.password-row label {
+    margin-bottom: 0; /* Overrides the default label margin */
+}
+
+.password-row a {
+    font-size: 12px;
+    color: #8c899c;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.password-row a:hover {
+    color: #d946ef;
+}
+
+/* Gradient Button */
+button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #8b5cf6, #ec4899);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(236, 72, 153, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Register footer */
+.register {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 14px;
+    color: #8c899c;
+}
+
+.register a {
+    color: #8b5cf6;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.register a:hover {
+    color: #ec4899;
+    text-decoration: underline;
+}
